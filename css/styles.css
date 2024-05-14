@@ -1,0 +1,99 @@
+:root{
+    --cor-principal: #455199;
+    --cor-secundaria: #2bc545;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color:var(--cor-principal)
+}
+
+.form{
+    background-color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 20px #ccc;
+    transition: 1s;
+}
+
+.form:hover{
+    box-shadow: 1px 1px 30px #ffffff;
+    transition: 1s;
+}
+
+.form input{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border:2px solid #ccc;
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+.botao:hover{
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+.form h1{
+    font-weight: 700;
+}
+
+.form h3{
+    font-weight: 300;
+}
+
+.menus a{
+    color: #ffffff;
+}
+
+
+.btn{
+    background-color: var(--cor-secundaria);
+    border-radius: 15px;
+    border: 2px solid var(--cor-secundaria);
+    transition: 1s;
+    display: flex;
+    color: #ffffff;
+    font-weight: 800;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn a{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.btn:hover{
+    border: 2px solid var(--cor-secundaria);
+    background-color: transparent;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+input{
+    display: flex;
+}
+
+.cabecalho{
+    font-family: "Honk", system-ui;
+    font-weight: 700;
+    font-size: 70px;
+    margin-top: 30px;
+}
