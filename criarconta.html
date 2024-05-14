@@ -25,21 +25,21 @@
     </header>
     <img src="./img/New Piskel.gif" class="jogo" alt="">
     <div class="container box">
-        <form action="#" method="get" class="form">
+        <form action="#" onsubmit="confereSenha()" method="get" class="form">
             <h1 class="text-center mb-3">Crie sua conta</h1>
             <h3 class="text-center criar-conta">E-mail</h3>
             <input class="text-center criar-conta" type="email" id="gmail" placeholder="seuemail@email.com" required>
             <h3 class="text-center">E-mail do Responsável</h3>
-            <input class="text-center criar-conta" type="email" id="gmail" placeholder="email@responsavel.com" required>
+            <input class="text-center criar-conta" type="email" id="rgmail" placeholder="email@responsavel.com" required>
             <h3 class="text-center criar-conta">Senha</h3>
-            <input class="text-center" type="password" type="password" id="senha" placeholder="Digite sua senha"required>
+            <input class="text-center" type="password" type="password" name="senha" placeholder="Digite sua senha"required>
             <h3 class="text-center criar-conta">Repita a Senha</h3>
-            <input class="text-center" type="password" type="password" id="senha" placeholder="Digite sua senha"required>
-            <a class="btn" href="#">Criar conta</a>
+            <input class="text-center" type="password" type="password" name="rsenha" placeholder="Digite sua senha"required>
+            <input type="submit" id="envia" value="Criar conta" class="btn">
         </form>
     </div>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
