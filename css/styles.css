@@ -124,7 +124,7 @@ input {
 
 
 .mateus {
-    animation: rodar, piscar 1s infinite;
+    animation: piscar 1s infinite;
     color: red;
     text-align: center;
     
@@ -134,7 +134,7 @@ input {
 @keyframes piscar {
     0% {
         color: rgb(23, 224, 100);
-        transform: scale(2 , 2);
+        
     }
 
     30% {
@@ -152,3 +152,18 @@ input {
     }
 }
 
+
+.card-title{
+    text-align: center;
+    font-weight: 900;
+}
+
+.card-body{
+    box-shadow: 2px 2px #00000069;
+    transition: 1s ;
+}
+
+.card-body:hover{
+    box-shadow: 3px 3px #000000;
+    transition: 1s;
+}
