@@ -1,19 +1,19 @@
-:root{
+:root {
     --cor-principal: #455199;
     --cor-secundaria: #2bc545;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
 
-body{
-    background-color:var(--cor-principal)
+body {
+    background-color: var(--cor-principal)
 }
 
-.form{
+.form {
     background-color: white;
     padding-left: 80px;
     padding-right: 80px;
@@ -24,39 +24,39 @@ body{
     transition: 1s;
 }
 
-.form:hover{
+.form:hover {
     box-shadow: 1px 1px 30px #ffffff;
     transition: 1s;
 }
 
-.form input{
+.form input {
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 30px;
     border-radius: 5px;
-    border:2px solid #ccc;
+    border: 2px solid #ccc;
     box-shadow: 1px 1px 10px #ccc;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: var(--cor-secundaria);
     color: white;
 }
 
-.form h1{
+.form h1 {
     font-weight: 700;
 }
 
-.form h3{
+.form h3 {
     font-weight: 300;
 }
 
-.menus a{
+.menus a {
     color: #ffffff;
 }
 
 
-.btn{
+.btn {
     background-color: var(--cor-secundaria);
     border-radius: 15px;
     border: 2px solid var(--cor-secundaria);
@@ -68,7 +68,7 @@ body{
     margin-bottom: 20px;
 }
 
-.btn a{
+.btn a {
     padding-left: 30px;
     padding-right: 30px;
     font-size: 15px;
@@ -76,36 +76,79 @@ body{
     color: white;
     font-weight: 700;
 }
-.btn:hover{
+
+.btn:hover {
     border: 2px solid var(--cor-secundaria);
     background-color: transparent;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
-    
+
 }
 
-input{
+input {
     display: flex;
     margin: auto;
 }
 
-.cabecalho{
+.cabecalho {
     font-family: "Honk", system-ui;
     font-weight: 700;
     font-size: 70px;
     margin-top: 30px;
 }
 
-.jogo{
+.jogo {
     width: 100px;
     display: flex;
     margin: auto;
 }
 
-.criar-conta{
+.criar-conta {
     margin: auto;
+
+}
+
+
+.fases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3%;
+    margin-left: 10%;
+    grid-row-gap: 1em;
+    grid-column-gap: 10px;
+
+}
+
+
+.mateus {
+    animation: rodar, piscar 1s infinite;
+    color: red;
+    text-align: center;
     
 }
+
+
+@keyframes piscar {
+    0% {
+        color: rgb(23, 224, 100);
+        transform: scale(2 , 2);
+    }
+
+    30% {
+        color: #0015ff;
+    }
+
+    60% {
+        color: #fb08ff;
+    }
+    90%{
+        color: chartreuse;
+    }
+    100%{
+        color: deeppink;
+    }
+}
+
