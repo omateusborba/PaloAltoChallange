@@ -12,6 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <style>
         .card-body.stretched-link {
             text-decoration: none;
@@ -38,6 +43,7 @@
         .footer p {
             margin-bottom: 10px;
         }
+        
     </style>
 </head>
 
@@ -74,7 +80,7 @@
         <section class="mt-5">
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <div class="card quatro">
+                    <div class="nes-container card quatro p-0">
                         <a href="aventurar-se.html" class="card-body stretched-link" data-bs-toggle="modal"
                             data-bs-target="#modalfases">
                             <h5 class="card-title">Aventurar-se</h5>
@@ -84,7 +90,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="card quatro">
+                    <div class="nes-container card quatro p-0">
                         <a href="treinamento.html" class="card-body stretched-link">
                             <h5 class="card-title">Treinamento</h5>
                             <p class="card-text">Aprimore suas habilidades matemáticas com módulos interativos e
@@ -92,24 +98,24 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card dois">
+                <div class="col-xxl-6 mb-4">
+                    <div class="nes-container card dois p-0">
                         <a href="tutorial.html" class="card-body stretched-link">
                             <h5 class="card-title">Tutorial para iniciantes</h5>
                             <p class="card-text">Aprenda os fundamentos da matemática de forma fácil e rápida.</p>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card dois">
+                <div class="col-xxl-3 mb-4">
+                    <div class="nes-container card dois p-0">
                         <a href="meu-perfil.html" class="card-body stretched-link">
                             <h5 class="card-title">Meu Perfil</h5>
                             <p class="card-text">Visualize seu progresso, conquistas e personalize suas informações.</p>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card dois">
+                <div class="col-xxl-3 mb-4">
+                    <div class="nes-container card dois p-0">
                         <a href="configuracoes.html" class="card-body stretched-link">
                             <h5 class="card-title">Configurações</h5>
                             <p class="card-text">Personalize sua experiência e torne o aprendizado mais agradável.</p>
@@ -118,23 +124,43 @@
                 </div>
             </div>
         </section>
-        <div class="modal fade" id="modalfases" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalfases" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content nes-container">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha a sua operacao</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#modalfases"></div>
                     </div>
                     <div class="modal-body row">
-                        <div>
-                            <a href=""><img class="rounded-circle" alt="" src="../img/viloes-img/Vilão 1.jpeg" /style="width: 100px;"></a>
-                            <a href=""><img class="rounded-circle" alt="" src="../img/viloes-img/Vilão 2.jpeg" /style="width: 100px;"></a>
+                            <img  src="../img/viloes-img/Vilão 1.jpeg" style="width: 100px;" data-bs-toggle="modal" data-bs-target="#adicao">
+                            <img class="rounded-circle" data-bs-toggle="modal"
+                            data-bs-target="#subtracao" alt="" src="../img/viloes-img/Vilão 2.jpeg" style="width: 100px;">
                             <a href="./multiplica.html">Multiplicação</a>
-                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="adicao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content nes-container">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha a sua fase em adicao</h1>
+                        <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#modalfases"></div>
+                    </div>
+                    <div class="modal-body row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="subtracao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content nes-container">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha a sua fase em subtracao</h1>
+                        <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#modalfases"></div>
+                    </div>
+                    <div class="modal-body pixelart-to-css">
                     </div>
                 </div>
             </div>
@@ -159,6 +185,7 @@
             </div>
         </div>
     </footer>
+<script src="../js/script.js"></script>
 </body>
 
 </html>
