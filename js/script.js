@@ -1,6 +1,3 @@
-// script.js
-import "nes.css/css/nes.min.css";
-
 function confereSenha(senha) {
     const regexMaiuscula = /[A-Z]/;
     const regexMinuscula = /[a-z]/;
