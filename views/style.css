@@ -29,7 +29,7 @@
 }
 
 body{
-    background-color: #03240c;
+    background-color: #ffffff;
     /* background-image: url(../img/1f8b2d9637833adba2269f24fbea633b.jpg);
     background-repeat: no-repeat;
     background-size: 100% 82%; */
@@ -37,27 +37,50 @@ body{
 }
 
 .nvb{
-    background-color: #000000;
+    background-color: #00c1ff;
 }
 
 .txt-principal{
-    color:white
+    color:rgb(0, 0, 0)
 }
 
 .avt{
-    background-image: url(../img/45914.jpg);
+    background-image: url(../img/Design\ sem\ nome\ \(7\).png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .treino{
-    /* Ajustar a imagem pq ta esticada demais */
-    background-image: url(../img/VEC\ SAV\ 276-25.jpg);
+    
+    background-image: url(../img/Design\ sem\ nome\ \(3\).png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.card-text, .card-title{
-    color: #fff
+.tutorial{
+    background-image: url(../img/Design\ sem\ nome\ \(4\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
+.perfil{
+    background-image: url(../img/Design\ sem\ nome\ \(5\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.config{
+    background-image: url(../img/Design\ sem\ nome\ \(6\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.card-text, .card-title{
+    color: #ffffff
+}
+
+.prf{
+    color: black;
+}
