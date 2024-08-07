@@ -29,7 +29,10 @@
 }
 
 body{
-    background-color: #008000;
+    background-color: #03240c;
+    /* background-image: url(../img/1f8b2d9637833adba2269f24fbea633b.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 82%; */
 
 }
 
@@ -39,5 +42,22 @@ body{
 
 .txt-principal{
     color:white
+}
+
+.avt{
+    background-image: url(../img/45914.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.treino{
+    /* Ajustar a imagem pq ta esticada demais */
+    background-image: url(../img/VEC\ SAV\ 276-25.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card-text, .card-title{
+    color: #fff
 }
 
