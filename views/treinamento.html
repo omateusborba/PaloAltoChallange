@@ -12,6 +12,34 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logo.png" type="icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/teste.js"></script>
+    <script>$(document).ready(function(){
+        var videos = [
+            "Eh7XY7VlfAM?si=NFHHIpFpSDRa_w6A", // Vídeo 1
+            "3H-0AlAN1VRY?si=nnAUe5jTqeeL3225", // Vídeo 2
+            "tX-jJm0Pl0Q?si=TKB-J69xbp3r_fbz"  // Vídeo 3
+        ];
+        var currentIndex = 0;
+    
+        function updateVideo(index) {
+            $("#youtubeVideo").attr("src", "https://www.youtube.com/embed/" + videos[index]);
+        }
+    
+        $("#prox").click(function(){
+            if (currentIndex < videos.length - 1) {
+                currentIndex++;
+                updateVideo(currentIndex);
+            }
+        });
+    
+        $("#voltar").click(function(){
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateVideo(currentIndex);
+            }
+        });
+    });</script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark nvb">
@@ -41,27 +69,28 @@
     <main class="container">
         <section class="mt-5">
             <h2>Treinamento</h2>
-            <p>Aprimore suas habilidades matemáticas com módulos interativos e desafiadores.</p>
+            <p>Aprimore suas habilidades matemáticas com professores especializados.</p>
         </section>
         <section class="mt-5">
             <div class="row">
                 <div class="col-12 mb-4">
-                    <div class="nes-container card cinco">
-                        <div class="card-body">
+                    <div class="nes-container card cinco p-1">
+                        <div class="card-body p-0 video-container">
+                            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/Eh7XY7VlfAM?si=NFHHIpFpSDRa_w6A" title="Matematica para crianças. Aprender  multiplicar.  Multiplicação. Video educativo infantil" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class=""></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-xxl-4 mb-4">
                     <div class="um">
-                        <a href="">
+                        <a id="voltar">
                             <h5 class="nes-btn is-warning col-12">Voltar</h5>
                         </a>
                     </div>
                 </div>  
                 <div class="col-xxl-4 mb-4">
                     <div class="um">
-                        <a href="">
-                            <h5 class="nes-btn is-primary col-12">Próximo</h5>
+                        <a id="prox">
+                            <h5 id="prox" class="nes-btn is-primary col-12">Próximo</h5>
                         </a>
                     </div>
                 </div>  
