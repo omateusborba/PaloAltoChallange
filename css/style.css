@@ -84,3 +84,8 @@ body{
 .prf{
     color: black;
 }
+
+.msg-senha{
+    margin-top: 30px;
+    color: rgb(238, 96, 96);
+}
