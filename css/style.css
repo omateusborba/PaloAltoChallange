@@ -104,3 +104,9 @@ body{
     height: 100%;
     border: 0;
 }
+
+.criarc{
+    background-image: url(../img/Bg-Login.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
