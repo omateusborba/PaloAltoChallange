@@ -1,3 +1,14 @@
+//validação aprimorada de senha
+function verificaCaracteresEspeciais(senha){
+    const maiuscula = /[A-Z]/
+    const minuscula = /[a-z]/
+    const num = /[0-9]/
+    const esp = /[!@#$%^&*(),.?":{}|<>]/
+    
+    return maiuscula.test(senha) && minuscula.test(senha) && num.test(senha) && esp.test(senha)
+}
+
+
 function confereSenha() {
     const senha = document.getElementById("senha").value;
     const rSenha = document.getElementById("rsenha").value;
@@ -10,6 +21,10 @@ function confereSenha() {
         validar.textContent = "Por favor, preencha ambas as senhas.";
     } else if (senha !== rSenha) {
         validar.textContent = "As senhas não conferem, tente novamente";
+    } else if (senha.length < 8){
+        validar.textContent = "A senha deve conter no minimo 8 caractéres"
+    } else if (!verificaCaracteresEspeciais(senha)){
+        validar.textContent = "A senha deve conter pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial.";
     } else {
         btn.setAttribute("href", '../views/index.html');
     }
