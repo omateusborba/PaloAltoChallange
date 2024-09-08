@@ -2,6 +2,7 @@ function confereSenha() {
     const senha = document.getElementById("senha").value;
     const rSenha = document.getElementById("rsenha").value;
     const validar = document.querySelector("#validar");
+    const btn = document.querySelector("#btn");
 
     validar.textContent = ""; // Limpa o conteúdo do elemento
 
@@ -10,7 +11,7 @@ function confereSenha() {
     } else if (senha !== rSenha) {
         validar.textContent = "As senhas não conferem, tente novamente";
     } else {
-        alert("Deu Certo");
+        btn.setAttribute("href", '../views/index.html');
     }
 }
 
