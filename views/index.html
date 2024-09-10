@@ -15,7 +15,16 @@
     <link rel="shortcut icon" href="../img/logo.png" type="icon">
 </head>
 
-<body>
+<body id="aventura">
+    <audio src="../Music/inicio-Mathquest.mp3"></audio>
+    <script>
+        const pagina = document.querySelector('#aventura')
+        pagina.addEventListener('click', function(){
+            const audio = document.querySelector('audio')
+            audio.play()
+        })
+        
+    </script>
     <nav class="navbar navbar-expand-lg navbar-dark nvb">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">MathQuest</a>
