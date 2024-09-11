@@ -56,7 +56,7 @@ $(document).ready(function(){
 });
 
 
-const audio = document.querySelector('audio')
-document.addEventListener('mouseOver', function(){
-    audio.play()
-})
+function play() {
+    const musica = document.getElementById("audio");
+    musica.play();
+}
