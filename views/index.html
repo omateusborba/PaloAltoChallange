@@ -13,18 +13,12 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logo.png" type="icon">
+    <script src="../js/script.js"></script>
 </head>
 
-<body id="aventura">
+<body>
     <audio src="../Music/inicio-Mathquest.mp3"></audio>
-    <script>
-        const pagina = document.querySelector('#aventura')
-        pagina.addEventListener('click', function(){
-            const audio = document.querySelector('audio')
-            audio.play()
-        })
-        
-    </script>
+   
     <nav class="navbar navbar-expand-lg navbar-dark nvb">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">MathQuest</a>
@@ -127,7 +121,8 @@
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha a sua fase em adição</h1>
                         <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#modalfases"></div>
                     </div>
-                    <div class="modal-body row">
+                    <div class="modal-body row position-relative">
+                        <a href="fases.html"><img src="../img/adicao.png" style="width: 100px; image-rendering: pixelated;"></a>
                     </div>
                 </div>
             </div>

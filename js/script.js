@@ -1,53 +1,62 @@
-function confereSenha(senha) {
-    const regexMaiuscula = /[A-Z]/;
-    const regexMinuscula = /[a-z]/;
-    const regexNumero = /[0-9]/;
-    const regexEspecial = /[!@#$%^&*(),.?":{}|<>]/;
-
-    let mensagensErro = [];
-
-    if (!regexMaiuscula.test(senha)) {
-        mensagensErro.push('uma letra maiúscula');
-    }
-    if (!regexMinuscula.test(senha)) {
-        mensagensErro.push('uma letra minúscula');
-    }
-    if (!regexNumero.test(senha)) {
-        mensagensErro.push('um número');
-    }
-    if (!regexEspecial.test(senha)) {
-        mensagensErro.push('um caractere especial');
-    }
-
-    return mensagensErro.length === 0 ? null : 'A senha deve conter pelo menos ' + mensagensErro.join(', ') + '.';
+//validação aprimorada de senha
+function verificaCaracteresEspeciais(senha){
+    const maiuscula = /[A-Z]/
+    const minuscula = /[a-z]/
+    const num = /[0-9]/
+    const esp = /[!@#$%^&*(),.?":{}|<>]/
+    
+    return maiuscula.test(senha) && minuscula.test(senha) && num.test(senha) && esp.test(senha)
 }
 
-function calculaForcaSenha(senha) {
-    let forca = 0;
-    if (/[a-z]/.test(senha)) forca++;
-    if (/[A-Z]/.test(senha)) forca++;
-    if (/[0-9]/.test(senha)) forca++;
-    if (/[!@#$%^&*(),.?":{}|<>]/.test(senha)) forca++;
-    return forca;
-}
 
-function mostraForcaSenha() {
-    const senha = document.querySelector('input[name=senha]').value;
-    const forca = calculaForcaSenha(senha);
-    const forcaTexto = ["Muito Fraca", "Fraca", "Média", "Forte", "Muito Forte"];
-    const feedback = document.getElementById('feedbackSenha');
+function confereSenha() {
+    const senha = document.getElementById("senha").value;
+    const rSenha = document.getElementById("rsenha").value;
+    const validar = document.querySelector("#validar");
+    const btn = document.querySelector("#btn");
 
-    feedback.textContent = "Força da senha: " + forcaTexto[forca];
-}
+    validar.textContent = ""; // Limpa o conteúdo do elemento
 
-function validarSenhaNoSubmit(event) {
-    const senha = document.querySelector('input[name=senha]').value;
-    const mensagemErro = confereSenha(senha);
-    if (mensagemErro) {
-        event.preventDefault();
-        alert(mensagemErro);
+    if (!senha || !rSenha) {
+        validar.textContent = "Por favor, preencha ambas as senhas.";
+    } else if (senha !== rSenha) {
+        validar.textContent = "As senhas não conferem, tente novamente";
+    } else if (senha.length < 8){
+        validar.textContent = "A senha deve conter no minimo 8 caractéres"
+    } else if (!verificaCaracteresEspeciais(senha)){
+        validar.textContent = "A senha deve conter pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial.";
+    } else {
+        btn.setAttribute("href", '../views/index.html');
     }
 }
 
-document.querySelector('input[name=senha]').addEventListener('input', mostraForcaSenha);
-document.querySelector('form').addEventListener('submit', validarSenhaNoSubmit);
+$(document).ready(function(){
+    var videos = [
+        "Eh7XY7VlfAM?si=NFHHIpFpSDRa_w6A", // Vídeo 1
+        "kq0kh0XvT9c?si=zIzs6-RlbgdiTZsB", // Vídeo 2
+        "tX-jJm0Pl0Q?si=TKB-J69xbp3r_fbz",
+        "Ikl1WuJ5Wt8?si=CPP48RP8XcFbnyZh",
+        "NJkH8ND3Pu4?si=YBx6kBKaAm1jLP_O"  // Vídeo 3
+    ];
+    var currentIndex = 0;
+
+    function updateVideo(index) {
+        $("#youtubeVideo").attr("src", "https://www.youtube.com/embed/" + videos[index]);
+    }
+
+    $("#prox").click(function(){
+        currentIndex = (currentIndex + 1) % videos.length; // Volta para o primeiro vídeo
+        updateVideo(currentIndex);
+    });
+
+    $("#voltar").click(function(){
+        currentIndex = (currentIndex - 1 + videos.length) % videos.length; // Vai para o último vídeo se estiver no primeiro
+        updateVideo(currentIndex);
+    });
+});
+
+
+const audio = document.querySelector('audio')
+document.addEventListener('mouseOver', function(){
+    audio.play()
+})
