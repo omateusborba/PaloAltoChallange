@@ -5,7 +5,9 @@
     /* Herda a cor do texto do card */
 }
 
-.sete{}
+.seis{
+    height: 600px;
+}
 
 .cinco{
     height: 500px;
@@ -14,6 +16,14 @@
 .quatro {
     height: 400px;
     /* Ajuste a altura desejada em pixels */
+}
+
+.tres{
+    height: 300px;
+}
+
+.um{
+    height: 100px;
 }
 
 .dois {
