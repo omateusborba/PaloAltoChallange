@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +13,17 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logo.png" type="icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">MathQuest</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,41 +51,73 @@
                 <div class="col-12">
                     <div class="nes-container card seis p-0">
                         <div class="card-body p-0">
-                                <div class="col-12">
-                                    <div class="row px-3 pt-1">
-                                        <div class="col-6 dois">
-                                            <div class="col-12 nes-container is-rounded um">
-                                                <p>Multiplicação </p>
-                                            </div>
+                            <div class="col-12">
+                                <div class="row px-3 pt-1">
+                                    <div class="col-6 dois">
+                                        <div class="col-12 nes-container is-rounded um">
+                                            <p id="frase"></p>
                                         </div>
-                                        <div class="col-6 dois"></div>
                                     </div>
-                                    <div class="row px-3">
-                                        <div class="col-6 dois"></div>
-                                        <div class="col-6 dois">
-                                            <div class="col-12 nes-container is-rounded um">
-                                                <p>Pequeno Pedrinho</p>
-                                            </div>
+                                    <div class="col-6 dois"></div>
+                                </div>
+                                <div class="row px-3">
+                                    <div class="col-6 dois"></div>
+                                    <div class="col-6 dois">
+                                        <div class="col-12 nes-container is-rounded um">
+                                            <p id="user"></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-dark row col-12 m-0 border-0 dois">
+                            </div>
+                            <progress class="nes-progress is-success" id="vida" value="" max="100"></progress>
+                            <div class="bg-dark row col-12 m-0 border-0 dois">
                                 <div class="text-dark col-md-6 nes-balloon from-left">
-                                    5 + 5 = ?
+                                    <p id="pergunta"></p>
                                 </div>
                                 <div class="row col-md-6">
-                                    <h5 class="nes-btn col-5 m-2">5</h5>
-                                    <h5 class="nes-btn col-5 m-2">10</h5>
-                                    <h5 class="nes-btn col-5 m-2">15</h5>
-                                    <h5 class="nes-btn col-5 m-2">20</h5>
+                                    <button onclick="" class="nes-btn col-5 m-2 opc-btn">
+                                        <h5 class="opc"></h5>
+                                    </button>
+                                    <button class="nes-btn col-5 m-2 opc-btn">
+                                        <h5 class="opc"></h5>
+                                    </button>
+                                    <button class="nes-btn col-5 m-2 opc-btn">
+                                        <h5 class="opc"></h5>
+                                    </button>
+                                    <button class="nes-btn col-5 m-2 opc-btn">
+                                        <h5 class="opc"></h5>
+                                    </button>
+
                                 </div>
-                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>                     
-            </div>    
+                </div>
+            </div>
         </section>
+
+        <div class="modal fade" id="correctAnswerModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Resposta Correta!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Parabéns! Você selecionou a resposta correta.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
@@ -98,6 +136,9 @@
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
+
+    <script src="../js/fases.js"></script>
 </body>
+
 </html>
