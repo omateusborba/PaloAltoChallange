@@ -117,7 +117,7 @@ function atualizarBarraDeVida() {
     lifeBar -= 25; // Reduzir 25 unidades a cada resposta correta
     if (lifeBar <= 0) {
         lifeBar = 0;
-         // Certificar que a vida não seja menor que 0
+        $('#exibirModal').modal('show')// Certificar que a vida não seja menor que 0
     } else if (lifeBar >= 31 && lifeBar <= 60) {
         vida.classList.add("is-warning")
     } else if (lifeBar < 30) {
@@ -133,7 +133,7 @@ function atualizarBarraHeroi() {
     lifeBar2 -= 10
     if (lifeBar2 <= 0) {
         lifeBar2 = 0;
-        alert("Você Perdeu!!") // Certificar que a vida não seja menor que 0
+        $('#exibirModal2').modal('show') // Certificar que a vida não seja menor que 0
     } else if (lifeBar2 >= 31 && lifeBar2 <= 60) {
         vida2.classList.add("is-warning")
     } else if (lifeBar2 < 30) {

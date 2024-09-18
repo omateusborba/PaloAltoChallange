@@ -100,23 +100,40 @@
       </div>
     </section>
 
-    <div class="modal fade" id="correctAnswerModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade" id="exibirModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalLabel">Resposta Correta!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Parabéns você venceu!!</h1>
           </div>
           <div class="modal-body">
-            Parabéns! Você selecionou a resposta correta.
+            <p id="modalContent">você derrotou o vilão e novos desafios te aguardam, aventure-se agora mesmo</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
-              Fechar
-            </button>
+            <a href="index.html">
+              <h6 class="nes-btn is-success">Pròxima aventura</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="exibirModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Ah não... Você perdeu!</h1>
+          </div>
+          <div class="modal-body">
+            <p id="modalContent">Você não conseguiu derrota-lo... Mas pode tentar novamente, não desanime</p>
+          </div>
+          <div class="modal-footer">
+            <a href="fases.html">
+              <h6 class="nes-btn is-warning">Tentar de novo</h6>
+            </a>
+            <a href="index.html">
+              <h6 class="nes-btn is-error">Sair</h6>
+            </a>
           </div>
         </div>
       </div>
