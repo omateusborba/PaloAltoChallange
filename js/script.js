@@ -1,4 +1,4 @@
-//validação aprimorada de senha
+//validação de senha
 function verificaCaracteresEspeciais(senha) {
     const maiuscula = /[A-Z]/
     const minuscula = /[a-z]/
@@ -30,6 +30,8 @@ function confereSenha() {
     }
 }
 
+
+//Função dos vídeos na parte de treinamento
 $(document).ready(function () {
     var videos = [
         "Eh7XY7VlfAM?si=NFHHIpFpSDRa_w6A", // Vídeo 1
@@ -55,11 +57,15 @@ $(document).ready(function () {
     });
 });
 
+
+//Função para tocar a música nas páginas
 function play() {
     const musica = document.getElementById("audio");
     musica.play();
 }
 
+
+//Toast da parte do perfil
 const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
 
@@ -91,27 +97,27 @@ function selectProfile(fotoUrl) {
 }
 
 
+
+
+//A partir daqui está toda a mecânica do jogo em si!!
 const vida = document.querySelector("#vida")
 const vida2 = document.querySelector("#vida1")
 let lifeBar = 100
+let lifeBar2 = 100
 
+vida2.value = lifeBar2
 vida.value = lifeBar
 
 const pergunta = document.querySelector('#pergunta')
 const user = document.querySelector("#user")
 const frase = document.querySelector("#frase")
 
-// const opc1 = document.querySelector('#opc1')
-// const opc2 = document.querySelector('#opc2')
-// const opc3 = document.querySelector('#opc3')
-// const opc4 = document.querySelector('#opc4')
-
 function atualizarBarraDeVida() {
     const vida = document.getElementById('vida');
-    lifeBar -= 25; // Reduzir 10 unidades a cada resposta correta
+    lifeBar -= 25; // Reduzir 25 unidades a cada resposta correta
     if (lifeBar <= 0) {
         lifeBar = 0;
-        alert("Você venceu") // Certificar que a vida não seja menor que 0
+         // Certificar que a vida não seja menor que 0
     } else if (lifeBar >= 31 && lifeBar <= 60) {
         vida.classList.add("is-warning")
     } else if (lifeBar < 30) {
@@ -119,7 +125,24 @@ function atualizarBarraDeVida() {
     } else {
         vida.classList.add("is-success")
     }
-    vida.value = lifeBar; // Atualiza a barra de progresso
+    vida.value = lifeBar; // Atualiza a barra de progresso do vilão
+}
+
+function atualizarBarraHeroi() {
+    const vida2 = document.getElementById('vida1')
+    lifeBar2 -= 10
+    if (lifeBar2 <= 0) {
+        lifeBar2 = 0;
+        alert("Você Perdeu!!") // Certificar que a vida não seja menor que 0
+    } else if (lifeBar2 >= 31 && lifeBar2 <= 60) {
+        vida2.classList.add("is-warning")
+    } else if (lifeBar2 < 30) {
+        vida2.classList.add("is-error")
+    } else {
+        vida2.classList.add("is-success")
+    }
+    
+    vida2.value = lifeBar2
 }
 
 function gerarNovoDesafio() {
@@ -159,11 +182,13 @@ function gerarNovoDesafio() {
         buttons[index].onclick = function () {
             // Verificar se o número clicado é a resposta correta
             if (parseInt(h5.textContent) === respCerta) {
-                // Chamar a função novamente para gerar um novo desafio   
-                // lifeBar -= 10
-                // vida.value = lifeBar                                       
+                // Chamar a função novamente para gerar um novo desafio                                        
                 gerarNovoDesafio();
                 atualizarBarraDeVida()
+            } else {
+                //tira 10 de vida caso o usuário erre a conta.
+                atualizarBarraHeroi();
+                gerarNovoDesafio();
             }
         };
     });
