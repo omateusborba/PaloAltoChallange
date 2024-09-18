@@ -129,3 +129,36 @@ body{
     height: 20px;
     width: 98%;
 }
+
+/* Avatar Icon */
+.perfil-icone {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.gallery {
+    display: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.perfil-opcao img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.perfil-opcao img:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+/* Avatar Icon */
