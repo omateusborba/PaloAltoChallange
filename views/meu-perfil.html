@@ -12,6 +12,7 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logo.png" type="icon">
+    <script src="../js/script.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark nvb">
@@ -85,7 +86,6 @@
                     <div class="nes-container p-0 card um">
                         <div class="card-body row">
                             <div class="col-6 ">
-                                <h5 class="card-title prf">Progresso</h5>
                                 <p class="card-text prf">Fases completadas</p>
                             </div>
                             <div class="col-6">
@@ -98,16 +98,34 @@
                     </div>
                 </div> 
                 <div class="col-12 mb-4">
-                    <div class="nes-container p-0 card um">
-                        <a href="meu-perfil.html" class="card-body stretched-link">
-                            <h5 class="card-title prf">Editar</h5>
-                            <p class="card-text prf">Altere suas informações</p>
-                        </a>
-                    </div>
+                    <button type="button" class="nes-btn is-warning" data-bs-target="#modal1" data-bs-toggle="modal">Editar</button>
                 </div>                             
             </div>    
         </section>
+        <div class="modal fade " id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> 
+            <div class="modal-dialog modal-dialog-centered modal-lg ">
+                <div class="modal-content nes-dialog is-rounded">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar</h1>
+                        <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#config"></div>
+                </div>
+                    <div class="modal-body">
+                        <div class="nes-field">
+                            <label for="name_field">Nome</label>
+                            <input type="text" id="name_field" class="nes-input">
+                        </div>
+                        <div class="nes-field mt-3">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="nes-input">
+                        </div>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="nes-btn is-disabled" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="nes-btn is-success mx-2">Salvar</button>
+                </div>
+        </div>
     </main>
+    
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">

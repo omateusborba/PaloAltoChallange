@@ -1,4 +1,5 @@
 const vida = document.querySelector("#vida")
+const vida2 =document.querySelector("#vida1")
 let lifeBar = 100
 
 vida.value = lifeBar
