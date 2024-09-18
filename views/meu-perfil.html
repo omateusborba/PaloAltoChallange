@@ -47,21 +47,6 @@
                 <div class="profile-selection">
                     <img id="selected-profile" src="../img/Avatar-Icon/gamer.png" alt="Perfil Selecionado" class="perfil-icone" onclick="openGallery()">
                 </div>
-                
-                <div id="gallery" class="gallery">
-                    <div class="perfil-opcao">
-                        <img src="../img/Avatar-Icon/gamer.png" alt="Perfil 1" onclick="selectProfile('../img/Avatar-Icon/gamer.png')">
-                    </div>
-                    <div class="perfil-opcao">
-                        <img src="../img/Avatar-Icon/cat.png" alt="Perfil 2" onclick="selectProfile('../img/Avatar-Icon/cat.png')">
-                    </div>
-                    <div class="perfil-opcao">
-                        <img src="../img/Avatar-Icon/hacker.png" alt="Perfil 3" onclick="selectProfile('../img/Avatar-Icon/hacker.png')">
-                    </div>
-                    <div class="perfil-opcao">
-                        <img src="../img/Avatar-Icon/panda.png" alt="Perfil 4" onclick="selectProfile('../img/Avatar-Icon/panda.png')">
-                    </div>
-                </div>
             </div>
                 <div class="col-md-6 mb-4">
                     <div class="nes-container p-0 card um">
@@ -107,7 +92,22 @@
                         <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#config"></div>
                 </div>
                     <div class="modal-body">
-                        <div class="nes-field">
+                        <p>Imagem de perfil</p>
+                        <div id="gallery" class="gallery">
+                            <div class="perfil-opcao">
+                                <img src="../img/Avatar-Icon/gamer.png" alt="Perfil 1" onclick="selectProfile('../img/Avatar-Icon/gamer.png')">
+                            </div>
+                            <div class="perfil-opcao">
+                                <img src="../img/Avatar-Icon/cat.png" alt="Perfil 2" onclick="selectProfile('../img/Avatar-Icon/cat.png')">
+                            </div>
+                            <div class="perfil-opcao">
+                                <img src="../img/Avatar-Icon/hacker.png" alt="Perfil 3" onclick="selectProfile('../img/Avatar-Icon/hacker.png')">
+                            </div>
+                            <div class="perfil-opcao">
+                                <img src="../img/Avatar-Icon/panda.png" alt="Perfil 4" onclick="selectProfile('../img/Avatar-Icon/panda.png')">
+                            </div>
+                        </div>
+                        <div class="nes-field mt-3">
                             <label for="name_field">Nome</label>
                             <input type="text" id="name_field" class="nes-input">
                         </div>
@@ -115,6 +115,7 @@
                             <label for="email">Email</label>
                             <input type="email" id="email" class="nes-input">
                         </div>
+                        
                     </div>
                 <div class="modal-footer">
                     <button type="button" class="nes-btn is-disabled" data-bs-dismiss="modal">Cancelar</button>
@@ -142,6 +143,5 @@
             </div>
         </div>
     </footer>
-    <script src="../js/iconperfil.js"></script>
 </body>
 </html>
