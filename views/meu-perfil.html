@@ -18,7 +18,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark nvb">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">MathQuest</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,66 +47,106 @@
         <div class="row">
             <div class="text-center mb-4">
                 <div class="profile-selection">
-                    <img id="selected-profile" src="../img/Avatar-Icon/gamer.png" alt="Perfil Selecionado" class="perfil-icone" onclick="openGallery()">
+                    <img id="selected-profile" src="../img/Avatar-Icon/gamer.png" alt="Perfil Selecionado"
+                        class="perfil-icone" onclick="openGallery()">
                 </div>
             </div>
-                <div class="col-md-6 mb-4">
-                    <div class="nes-container p-0 card um">
-                        <div class="card-body stretched-link ">
-                            <h5 class="card-title prf">Nome</h5>
-                            <p class="card-text prf">Nome Completo</p>
+            <div class="col-md-6 mb-4">
+                <div class="nes-container p-0 card um">
+                    <div class="card-body stretched-link ">
+                        <h5 class="card-title prf">Nome</h5>
+                        <p class="card-text prf">Nome Completo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="nes-container p-0 card um">
+                    <div class="card-body stretched-link">
+                        <h5 class="card-title prf">Email</h5>
+                        <p class="card-text prf">exemplo@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="nes-container p-0 card um">
+                    <div class="card-body row">
+                        <div class="col-6 ">
+                            <p class="card-text prf">Fases completadas</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="card-text prf">5/20</p>
+                            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 25%">25%</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="nes-container p-0 card um">
-                        <div class="card-body stretched-link">
-                            <h5 class="card-title prf">Email</h5>
-                            <p class="card-text prf">exemplo@gmail.com</p>
+            </div>
+            <div class="col-12 mb-4 text-center gap-2">
+                <button type="button" class="nes-btn is-error col-md-4" data-bs-target="#modal2" data-bs-toggle="modal">Alterar
+                    Senha</button>
+                <button type="button" class="nes-btn is-warning col-md-4" data-bs-target="#modal" data-bs-toggle="modal">Editar
+                    Perfil</button>
+            </div>
+        </div>
+        <!--Modal alterar senha-->
+        <div class="modal fade " id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg ">
+                <div class="modal-content nes-dialog is-rounded">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Alterar Senha</h1>
+                        <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#config"></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="nes-field mt-3">
+                            <label for="senha">Senha atual</label>
+                            <input type="password" id="senha" class="nes-input">
                         </div>
+                        <div class="nes-field mt-3">
+                            <label for="senha1">Nova senha</label>
+                            <input type="password" id="senha1" class="nes-input">
+                        </div>
+                        <div class="nes-field mt-3">
+                            <label for="senha2">Repita a nova senha</label>
+                            <input type="password" id="senha2" class="nes-input">
+                        </div>    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="nes-btn" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="nes-btn is-success mx-2" data-bs-dismiss="modal">Salvar</button>
                     </div>
                 </div>
-                <div class="col-12 mb-4">
-                    <div class="nes-container p-0 card um">
-                        <div class="card-body row">
-                            <div class="col-6 ">
-                                <p class="card-text prf">Fases completadas</p>
-                            </div>
-                            <div class="col-6">
-                                <p class="card-text prf">5/20</p>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 25%">25%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="col-12 mb-4">
-                    <button type="button" class="nes-btn is-warning" data-bs-target="#modal1" data-bs-toggle="modal">Editar</button>
-                </div>                             
-            </div>    
-        </section>
-        <div class="modal fade " id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> 
+            </div>
+        </div>
+        <!--Modal edditar perfil-->
+        <div class="modal fade " id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg ">
                 <div class="modal-content nes-dialog is-rounded">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Editar</h1>
                         <div class="nes-icon close" data-bs-toggle="modal" data-bs-target="#config"></div>
-                </div>
+                    </div>
                     <div class="modal-body">
                         <p>Imagem de perfil</p>
                         <div id="gallery" class="gallery">
                             <div class="perfil-opcao">
-                                <img src="../img/Avatar-Icon/gamer.png" alt="Perfil 1" onclick="selectProfile('../img/Avatar-Icon/gamer.png')">
+                                <img src="../img/Avatar-Icon/gamer.png" alt="Perfil 1"
+                                    onclick="selectProfile('../img/Avatar-Icon/gamer.png')">
                             </div>
                             <div class="perfil-opcao">
-                                <img src="../img/Avatar-Icon/cat.png" alt="Perfil 2" onclick="selectProfile('../img/Avatar-Icon/cat.png')">
+                                <img src="../img/Avatar-Icon/cat.png" alt="Perfil 2"
+                                    onclick="selectProfile('../img/Avatar-Icon/cat.png')">
                             </div>
                             <div class="perfil-opcao">
-                                <img src="../img/Avatar-Icon/hacker.png" alt="Perfil 3" onclick="selectProfile('../img/Avatar-Icon/hacker.png')">
+                                <img src="../img/Avatar-Icon/hacker.png" alt="Perfil 3"
+                                    onclick="selectProfile('../img/Avatar-Icon/hacker.png')">
                             </div>
                             <div class="perfil-opcao">
-                                <img src="../img/Avatar-Icon/panda.png" alt="Perfil 4" onclick="selectProfile('../img/Avatar-Icon/panda.png')">
+                                <img src="../img/Avatar-Icon/panda.png" alt="Perfil 4"
+                                    onclick="selectProfile('../img/Avatar-Icon/panda.png')">
                             </div>
                         </div>
                         <div class="nes-field mt-3">
@@ -115,15 +157,15 @@
                             <label for="email">Email</label>
                             <input type="email" id="email" class="nes-input">
                         </div>
-                        
                     </div>
-                <div class="modal-footer">
-                    <button type="button" class="nes-btn is-disabled" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="nes-btn is-success mx-2" data-bs-dismiss="modal">Salvar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="nes-btn" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="nes-btn is-success mx-2" data-bs-dismiss="modal">Salvar</button>
+                    </div>
                 </div>
+            </div>
         </div>
     </main>
-    
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
@@ -144,4 +186,5 @@
         </div>
     </footer>
 </body>
+
 </html>

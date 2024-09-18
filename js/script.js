@@ -1,10 +1,10 @@
 //validação aprimorada de senha
-function verificaCaracteresEspeciais(senha){
+function verificaCaracteresEspeciais(senha) {
     const maiuscula = /[A-Z]/
     const minuscula = /[a-z]/
     const num = /[0-9]/
     const esp = /[!@#$%^&*(),.?":{}|<>]/
-    
+
     return maiuscula.test(senha) && minuscula.test(senha) && num.test(senha) && esp.test(senha)
 }
 
@@ -21,16 +21,16 @@ function confereSenha() {
         validar.textContent = "Por favor, preencha ambas as senhas.";
     } else if (senha !== rSenha) {
         validar.textContent = "As senhas não conferem, tente novamente";
-    } else if (senha.length < 8){
+    } else if (senha.length < 8) {
         validar.textContent = "A senha deve conter no minimo 8 caractéres"
-    } else if (!verificaCaracteresEspeciais(senha)){
+    } else if (!verificaCaracteresEspeciais(senha)) {
         validar.textContent = "A senha deve conter pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial.";
     } else {
         btn.setAttribute("href", '../views/index.html');
     }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     var videos = [
         "Eh7XY7VlfAM?si=NFHHIpFpSDRa_w6A", // Vídeo 1
         "kq0kh0XvT9c?si=zIzs6-RlbgdiTZsB", // Vídeo 2
@@ -44,12 +44,12 @@ $(document).ready(function(){
         $("#youtubeVideo").attr("src", "https://www.youtube.com/embed/" + videos[index]);
     }
 
-    $("#prox").click(function(){
+    $("#prox").click(function () {
         currentIndex = (currentIndex + 1) % videos.length; // Volta para o primeiro vídeo
         updateVideo(currentIndex);
     });
 
-    $("#voltar").click(function(){
+    $("#voltar").click(function () {
         currentIndex = (currentIndex - 1 + videos.length) % videos.length; // Vai para o último vídeo se estiver no primeiro
         updateVideo(currentIndex);
     });
@@ -64,10 +64,10 @@ const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
 
 if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show()
-  })
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show()
+    })
 }
 
 function openGallery() {
@@ -82,7 +82,7 @@ function openGallery() {
 
 function selectProfile(fotoUrl) {
     const selectedProfile = document.getElementById("selected-profile");
-    
+
     // Atualiza a imagem do perfil principal com a foto selecionada
     selectedProfile.src = fotoUrl;
 
@@ -92,7 +92,7 @@ function selectProfile(fotoUrl) {
 
 
 const vida = document.querySelector("#vida")
-const vida2 =document.querySelector("#vida1")
+const vida2 = document.querySelector("#vida1")
 let lifeBar = 100
 
 vida.value = lifeBar
@@ -110,11 +110,11 @@ function atualizarBarraDeVida() {
     const vida = document.getElementById('vida');
     lifeBar -= 25; // Reduzir 10 unidades a cada resposta correta
     if (lifeBar <= 0) {
-        lifeBar = 0; 
+        lifeBar = 0;
         alert("Você venceu") // Certificar que a vida não seja menor que 0
-    }else if (lifeBar >= 31 && lifeBar <= 60) {
+    } else if (lifeBar >= 31 && lifeBar <= 60) {
         vida.classList.add("is-warning")
-    } else if (lifeBar < 30){
+    } else if (lifeBar < 30) {
         vida.classList.add("is-error")
     } else {
         vida.classList.add("is-success")
@@ -156,7 +156,7 @@ function gerarNovoDesafio() {
         h5.textContent = randomNumbers[index];
 
         // Adicionar evento de clique ao botão correspondente
-        buttons[index].onclick = function() {
+        buttons[index].onclick = function () {
             // Verificar se o número clicado é a resposta correta
             if (parseInt(h5.textContent) === respCerta) {
                 // Chamar a função novamente para gerar um novo desafio   
@@ -170,6 +170,6 @@ function gerarNovoDesafio() {
 }
 
 // Chama a função para iniciar o processo assim que a página carregar
-window.onload = function() {
+window.onload = function () {
     gerarNovoDesafio();
 }
