@@ -147,7 +147,38 @@ function atualizarBarraHeroi() {
 
 function gerarNovoDesafio() {
     // Gerar num1 e num2 aleatórios e exibir a pergunta
-    let num1 = Math.floor(Math.random() * 10);
+    let num1 = 0
+    const fase1 = document.getElementById('fase1')
+    const fase2 = document.getElementById('fase2')
+    const fase3 = document.getElementById('fase3')
+    const fase4 = document.getElementById('fase4')
+    const fase5 = document.getElementById('fase5')
+    const fase6 = document.getElementById('fase6')
+    const fase7 = document.getElementById('fase7')
+    const fase8 = document.getElementById('fase8')
+    const fase9 = document.getElementById('fase9')
+    if (document.body.contains(fase1)){
+        num1 = 1
+    } else if (document.body.contains(fase2)){
+        num1 = 2
+    } else if (document.body.contains(fase3)){
+        num1 = 3
+    } else if (document.body.contains(fase4)){
+        num1 = 4
+    } else if (document.body.contains(fase5)){
+        num1 = 5
+    } else if (document.body.contains(fase6)){
+        num1 = 6
+    } else if (document.body.contains(fase7)){
+        num1 = 7
+    } else if (document.body.contains(fase8)){
+        num1 = 8
+    } else if (document.body.contains(fase9)){
+        num1 = 9
+    } else{
+        num1 = Math.floor(Math.random() * 10);
+    }
+    
     let num2 = Math.floor(Math.random() * 10);
 
     const question = num1 + " x " + num2 + " = ?";
