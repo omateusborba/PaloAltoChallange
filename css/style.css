@@ -165,8 +165,48 @@ body{
 }
 /* Avatar Icon */
 
-.bg-game{
+.bg-game-fase1{
     background-image: url(../img/bg-fases/1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase2{
+    background-image: url(../img/bg-fases/2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase3{
+    background-image: url(../img/bg-fases/3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase4{
+    background-image: url(../img/bg-fases/4.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase5{
+    background-image: url(../img/bg-fases/5.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase6{
+    background-image: url(../img/bg-fases/6.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase7{
+    background-image: url(../img/bg-fases/7.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase8{
+    background-image: url(../img/bg-fases/8.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg-game-fase9{
+    background-image: url(../img/bg-fases/9.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
