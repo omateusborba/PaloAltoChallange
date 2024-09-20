@@ -141,8 +141,15 @@ function atualizarBarraHeroi() {
     } else {
         vida2.classList.add("is-success")
     }
-    
+
     vida2.value = lifeBar2
+}
+
+function arcade() {
+    let pontuacao = 0
+    const pontos = document.getElementById("vida")
+    pontuacao += 10
+    pontos.textContent = pontuacao.toString(pontuacao)
 }
 
 function gerarNovoDesafio() {
@@ -157,28 +164,28 @@ function gerarNovoDesafio() {
     const fase7 = document.getElementById('fase7')
     const fase8 = document.getElementById('fase8')
     const fase9 = document.getElementById('fase9')
-    if (document.body.contains(fase1)){
+    if (document.body.contains(fase1)) {
         num1 = 1
-    } else if (document.body.contains(fase2)){
+    } else if (document.body.contains(fase2)) {
         num1 = 2
-    } else if (document.body.contains(fase3)){
+    } else if (document.body.contains(fase3)) {
         num1 = 3
-    } else if (document.body.contains(fase4)){
+    } else if (document.body.contains(fase4)) {
         num1 = 4
-    } else if (document.body.contains(fase5)){
+    } else if (document.body.contains(fase5)) {
         num1 = 5
-    } else if (document.body.contains(fase6)){
+    } else if (document.body.contains(fase6)) {
         num1 = 6
-    } else if (document.body.contains(fase7)){
+    } else if (document.body.contains(fase7)) {
         num1 = 7
-    } else if (document.body.contains(fase8)){
+    } else if (document.body.contains(fase8)) {
         num1 = 8
-    } else if (document.body.contains(fase9)){
+    } else if (document.body.contains(fase9)) {
         num1 = 9
-    } else{
+    } else {
         num1 = Math.floor(Math.random() * 10);
     }
-    
+
     let num2 = Math.floor(Math.random() * 10);
 
     const question = num1 + " x " + num2 + " = ?";
@@ -213,7 +220,7 @@ function gerarNovoDesafio() {
         buttons[index].onclick = function () {
             // Verificar se o número clicado é a resposta correta
             if (parseInt(h5.textContent) === respCerta) {
-                // Chamar a função novamente para gerar um novo desafio                                        
+                // Chamar a função novamente para gerar um novo desafio                                      
                 gerarNovoDesafio();
                 atualizarBarraDeVida()
             } else {
